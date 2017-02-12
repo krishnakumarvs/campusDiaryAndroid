@@ -1,0 +1,104 @@
+ion-nav-view, .pane {
+    background:url(../img/slide-bg.jpg) no-repeat center top fixed !important;
+}
+
+.menu {
+  background:url(../img/slide-bg.jpg) no-repeat !important; 
+}
+
+.item-complex .item-content, .item-radio .item-content {
+  padding: 0px !important;
+}
+
+.ion-side-menu .item-complex .item-content {
+  padding: 0px !important;
+}
+
+.recuerda-slide-menu {
+    background-color: rgba(0, 0, 0, 0.39);
+    padding-left: 10px;
+    color: white !important;
+    border-bottom: 1px solid #537A77;
+    height: 50px;
+    line-height: 50px;
+    font-family: cursive;
+
+}
+
+.bar-stable .button.button-clear , .bar.bar-stable .title {
+  color: white !important;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.extra-margin-top {
+  margin-top: 15px;
+}
+
+
+/* New styles */
+
+.login-page-title {
+  background-color: rgba(255, 0, 0, 0.25);
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: cursive;
+}
+
+.default-priority {
+  opacity: 0.5;
+  color: black;
+}
+.highlight-priority {
+    color: lime !important;
+    opacity: 1 !important;
+    font-size: 20px !important;
+}
+
+.list-inset.sylabus-text {
+  margin: 0px;
+  height: 35px;
+}
+
+.sylabus-text .item-input {
+  margin-top: -10px;
+}
+
+.text-style{
+  padding-left: 10px !important;
+}
+.textarea-style{
+  padding-left: 10px !important;
+  height:70px;
+}
+
+.image-style{
+  margin-right: 10px;
+}
+
+.home-user-img {
+  border-radius: 50%;
+}
+
+.link-image{
+  float:right;
+  border-radius:50%;
+}
+
+.row.border-style {
+  border-style: solid;
+  border-width:1px;
+  border-color:white;
+}
+
+.header-side-menu-scroll.space{
+  margin-top:30px;
+}

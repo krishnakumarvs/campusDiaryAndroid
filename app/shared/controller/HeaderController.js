@@ -41,7 +41,7 @@
                     $state.go('header.feedback')
                     break;
                 default:
-                    $state.go('header.tasks')
+                    $state.go('login');
             }
         }
     }

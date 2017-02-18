@@ -10,34 +10,51 @@
          */
         .controller('EditprofileController', Editprofile);
 
-    Editprofile.$inject = ['$state', '$filter'];
+    Editprofile.$inject = ['$state', '$filter', 'config', '$http'];
 
-    function Editprofile($state, $filter) {
+    function Editprofile($state, $filter, config, $http) {
         var editprofileVm = this;
         // Variable declarations
         editprofileVm.currentUser = {};
-        editprofileVm.currentUser.email = "";
-        editprofileVm.currentUser.password = "";
+        editprofileVm.editUserDetails = editUserDetails;
 
-        // Function declarations
-        editprofileVm.authinticateUser = authinticateUser;
-        editprofileVm.SignUp = SignUp;
 
         activate();
 
         function activate() {
-            // To initialize anything before the project starts
+            if (!config.userDetails.name) {
+                $state.go('login');
+            } else {
+                editprofileVm.name = config.userDetails.name;
+                editprofileVm.address = config.userDetails.address;
+                editprofileVm.phone = config.userDetails.phone;
+            }
         }
 
-
-        function authinticateUser() {
-            console.log("Clicked on authenticate user");
-            $state.go('header.home');
+        function editUserDetails() {
+            $http({
+                method: "POST",
+                url: config.API_URL.editUserDetails,
+                data: {
+                    userId: config.userDetails.userId,
+                    name: editprofileVm.name,
+                    address: editprofileVm.address,
+                    phone: editprofileVm.phone
+                }
+            }).then(function mySucces(response) {
+                console.log(response.data);
+                var api_result = response.data.result;
+                if (api_result) {
+                    alert(response.data.description);
+                    config.userDetails = response.data.payload;
+                } else {
+                    alert(response.data.description);
+                }
+            }, function myError(response) {
+                console.log(response.statusText);
+            });
         }
 
-        function SignUp() {
-            $state.go('registration');
-        }
     }
 
 })();

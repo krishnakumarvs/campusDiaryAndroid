@@ -10,15 +10,15 @@
          */
         .controller('LoginController', Login);
 
-    Login.$inject = ['$state', '$filter','LoginDataService'];
+    Login.$inject = ['$state', '$filter', '$http', 'config'];
 
-    function Login($state, $filter, LoginDataService) {
+    function Login($state, $filter, $http, config) {
 
         var loginVm = this;
         // Variable declarations
         loginVm.currentUser = {};
-        loginVm.currentUser.email = "";
-        loginVm.currentUser.password = "";
+        loginVm.currentUser.email = "akhila@gmail.com";
+        loginVm.currentUser.password = "7121998";
 
         loginVm.clicked = clicked;
 
@@ -40,37 +40,26 @@
         function authinticateUser() {
             console.log("Clicked on authenticate user");
             console.log(loginVm.currentUser);
-
-            LoginDataService.authinticateUser(loginVm.currentUser).then(function(res) {
-                console.log(res);
-                $state.go('header.home');
-                /*if(res) {
-                    if(res.result) {
-                        alert(res.description);
-                        $state.go('header.home');
-                    } else {
-                        alert(res.description);
-                    }
-                } else {
-                    alert("server down");
-                }*/
-                
-                /*if(res) {
+            $http({
+                method: "POST",
+                url: config.API_URL.login,
+                data: {
+                    username: loginVm.currentUser.email,
+                    password: loginVm.currentUser.password
+                }
+            }).then(function mySucces(response) {
+                console.log(response.data);
+                var api_result = response.data.result;
+                if (api_result) {
+                    console.log("Authentication success");
                     $state.go('header.home');
+                    config.userDetails = response.data.payload;
                 } else {
-                    alert("Wrong");
-                }*/
+                    alert(response.data.description);
+                }
+            }, function myError(response) {
+                console.log(response.statusText);
             });
-
-            /*
-
-            LoginDataService.authinticateUser(x,y).then(function(res){
-
-            });
-    
-            */
-
-
 
             //$state.go('header.home');
         }

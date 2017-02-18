@@ -21,7 +21,7 @@
 					<div class ="col-10">
 					</div>
 					<div class ="col">
-						<input type ="text" class="text-style" name="uname">
+						<input type ="text" class="text-style" name="uname" ng-model="Editprofile.name">
 					</div>
 					<div class ="col-10">
 					</div>
@@ -37,7 +37,7 @@
 					<div class ="col-10">
 					</div>
 					<div class ="col">
-						<textarea  class="textarea-style" name="uaddress"> </textarea>
+						<textarea  class="textarea-style" name="uaddress" ng-model="Editprofile.address"></textarea>
 					</div>
 					<div class ="col-10">
 					</div>
@@ -55,13 +55,13 @@
 					<div class ="col-10">
 					</div>
 					<div class ="col">
-						<input type ="text" class="text-style" name="phoneno">
+						<input type ="text" class="text-style" name="phoneno" ng-model="Editprofile.phone">
 					</div>
 					<div class ="col-10">
 					</div>
 				</div>
 
-				<div class ="row">
+				<!-- <div class ="row">
 						<div class="col-10">
 						</div>
 						<div class="col"><h4>Email Id</h4>
@@ -76,7 +76,7 @@
 					</div>
 					<div class ="col-10">
 					</div>
-				</div>
+				</div> -->
 
 
 				<div class="row">
@@ -87,7 +87,7 @@
 					<div class ="col-33">
 					</div>
 					<div class ="col">
-						<input type ="button" value="SuBmIt" ng-click="Editprofile.authinticateUser()">
+						<input type ="button" value="Save" ng-click="Editprofile.editUserDetails()">
 					</div>
 					<div class ="col-33">
 					</div>

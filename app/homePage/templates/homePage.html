@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col">
 					<center>
-						<a href="http://localhost:8082/campus/index.html#/homedetail"><img src="img/default-user-image.png" class="home-user-img"></a>
+						<a href=""><img src="img/default-user-image.png" class="home-user-img"></a>
 					</center>
 				</div>
 			</div>
@@ -18,21 +18,20 @@
 				</div>
 				<div class="col">
 					<div class="row">
-						<div class="col"><a href="http://localhost:8082/campus/index.html#/notifications"><img src="img/dd.png" class="link-image" /></a></div>
+						<div class="col"><a href="#/homedetail"><img src="img/dd.png" class="link-image" /></a></div>
 					</div>
-					<div class="row row.border-style">
-						<div class="col">Title</div>
+
+
+					<div ng-repeat="notification in Home.notifications">
+						<div class="row row.border-style home-notification-title">
+							<div class="col">{{notification.title}}</div>
+						</div>	
+						<div class="row home-notification-description">
+							<div class="col">{{notification.description}}</div>
+						</div>
 					</div>
-					<div class="row">
-						<div class="col">sdfghdhdhklgghhljg</div>
-					</div>
-					<div class="row border-style">
-						<div class="col">Title</div>
-					</div>
-					<div class="row">
-						<div class="col">ettyuuoioiujjjjhjj</div>
-					</div>
-					</div>
+					
+				</div>
 				<div class="col-10">
 				</div>
 			</div> 

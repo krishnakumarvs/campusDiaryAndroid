@@ -16,55 +16,13 @@
 						</div>
 
 					</div>
-					<div class="row">
-						<div class="col"><input type="text" class="text-style" name="subject">
-						</div>
+					
+					<div class="row" ng-repeat="timeTable in Timetable.timetables">
+						<div class="col">{{timeTable.subject_name}}</div>
 
-						<div class="col"><input type="text" class="text-style" name="date" >
-						</div>
+						<div class="col">{{timeTable.date_milli | date : 'MMM dd'}}</div>
 
-						<div class="col"><input type="text" class="text-style" name="time" >
-						</div>
-					</div>
-					<div class="row">
-						<div class="col"><input type="text" class="text-style" name="subject">
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="date" >
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="time" >
-						</div>
-					</div>
-					<div class="row">
-						<div class="col"><input type="text" class="text-style" name="subject">
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="date" >
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="time" >
-						</div>
-					</div>
-					<div class="row">
-						<div class="col"><input type="text" class="text-style" name="subject">
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="date" >
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="time" >
-						</div>
-					</div>
-					<div class="row">
-						<div class="col"><input type="text" class="text-style" name="subject">
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="date" >
-						</div>
-
-						<div class="col"><input type="text" class="text-style" name="time" >
-						</div>
+						<div class="col">{{timeTable.time}}</div>
 					</div>
 				</div>
 				<div class="col-10">

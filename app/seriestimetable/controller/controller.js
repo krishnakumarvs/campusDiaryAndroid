@@ -10,40 +10,44 @@
          */
         .controller('SeriesTimetableController', Series);
 
-    Series.$inject = ['$state', '$filter'];
+    Series.$inject = ['$state', '$filter', '$http', 'config'];
 
-    function Series($state, $filter) {
+    function Series($state, $filter, $http, config) {
 
         var seriesVm = this;
-        // Variable declarations
-        seriesVm.currentUser = {};
-        seriesVm.currentUser.email = "";
-        seriesVm.currentUser.password = "";
-
-        seriesVm.clicked = clicked;
-
-        // Function declarations
-        seriesVm.authinticateUser = authinticateUser;
-        seriesVm.SignUp = SignUp;
 
         activate();
 
         function activate() {
-            // To initialize anything before the project starts
-        }
+            if (!config.userDetails.name) {
+                $state.go('login');
+            } else {
+                console.log("Fetching time table results for student in " + config.userDetails.semester);
+            }
 
-        function clicked() {
-            alert(123);
-        }
-
-
-        function authinticateUser() {
-            console.log("Clicked on authenticate user");
-            $state.go('header.home');
-        }
-
-        function SignUp() {
-            $state.go('registration');
+            $http({
+                method: "POST",
+                url: config.API_URL.getSeriesTimeTable,
+                data: {
+                    semester: config.userDetails.semester,
+                    branch: config.userDetails.branch,
+                    college_id: config.userDetails.college_id,
+                }
+            }).then(function mySucces(response) {
+                console.log(response.data);
+                var api_result = response.data.result;
+                if (api_result) {
+                    if (api_result.length == 0) {
+                        alert("Time table not announced");
+                    } else {
+                        seriesVm.timetables = response.data.payload;
+                    }
+                } else {
+                    alert(response.data.description);
+                }
+            }, function myError(response) {
+                console.log(response.statusText);
+            });
         }
     }
 

@@ -5,6 +5,9 @@
         login: prefix + "login",
         notifications: prefix + "getNotifications",
         editUserDetails: prefix + "editUserDetails",
+        getMainTimeTable: prefix + "getMainTimeTable",
+        getSeriesTimeTable: prefix + "getSeriesTimeTable",
+        sendFeedback: prefix + "sendFeedback"
     };
 
     var userDetails = {};

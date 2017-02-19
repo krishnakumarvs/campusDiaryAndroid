@@ -114,3 +114,7 @@ ion-nav-view, .pane {
     margin-bottom: 10px;
     padding-top: 10px !important;
 }
+
+.col.search-icon{
+  text-align: right;
+}

@@ -1,0 +1,25 @@
+{
+  result: " true",
+  description: "",
+  payload: {
+    id: "value",
+    userphoto: "",
+    name: "",
+    department: "",
+    year: "",
+    notifications: [
+      {
+        title: "",
+        description: ""
+      },
+      {
+        title: "",
+        description: ""
+      },
+      {
+        title: "",
+        description: ""
+      }
+    ]
+  }
+}

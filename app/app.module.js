@@ -71,7 +71,7 @@ angular.module(appName, ['ionic'])
 
     .state('header.homedetail', {
         url: "homedetail",
-         title: 'homedetail',
+         title: 'Profile',
          views:{
             'menuContent': {
                 templateUrl: "app/homedetail/templates/homedetail.html",

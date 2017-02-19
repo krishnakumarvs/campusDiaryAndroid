@@ -146,15 +146,6 @@ angular.module(appName, ['ionic'])
         }
     })
 
-
-    .state('registration', {
-        url: "/registration",
-        templateUrl: "app/registration/templates/registration.html",
-        controller: 'RegistrationController as Registration',
-        title: 'Registration'
-
-    })
-
     .state('header.settings', {
         url: "settings",
         parent: 'header',

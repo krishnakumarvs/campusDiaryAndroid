@@ -24,7 +24,6 @@
 
         // Function declarations
         loginVm.authinticateUser = authinticateUser;
-        loginVm.SignUp = SignUp;
 
         activate();
 
@@ -64,9 +63,6 @@
             //$state.go('header.home');
         }
 
-        function SignUp() {
-            $state.go('registration');
-        }
     }
 
 })();

@@ -15,12 +15,17 @@
     function Home($state, config, $http) {
         var homeVm = this;
         homeVm.GotoViewTask = GotoViewTask;
+        homeVm.userImage = "";
         activate();
 
         function activate() {
             if (!config.userDetails.name) {
                 $state.go('login');
             } else {
+                if (config.userDetails.photo) {
+                    homeVm.userImage = config.API_URL.serverUrl + config.userDetails.photo;
+                    console.log(homeVm.userImage);
+                }
                 $http({
                     method: "POST",
                     url: config.API_URL.notifications,
@@ -28,11 +33,11 @@
                         userId: config.userDetails.userId
                     }
                 }).then(function mySucces(response) {
-                    console.log(response.data);
+                    /*console.log(response.data);*/
                     var api_result = response.data.result;
                     if (api_result) {
-                        console.log("Notifications fetching success");
-                        console.log(response.data.payload);
+                        /*console.log("Notifications fetching success");
+                        console.log(response.data.payload);*/
                         homeVm.notifications = response.data.payload;
                     } else {
                         alert(response.data.description);

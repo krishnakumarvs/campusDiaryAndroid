@@ -8,7 +8,8 @@
 			</div>-->  
 			<div class="row">
 				<div class="col">
-					<center><img src="img/default-user-image.png" class="home-user-img">
+					<center><img ng-if="!HomeDetail.userImage" src="img/default-user-image.png" class="home-user-img">
+						<img ng-if="HomeDetail.userImage" class="home-user-img" style="width:30%" ng-src='{{HomeDetail.userImage}}' alt="dp"/>
 					</center>
 				</div>
 			</div>

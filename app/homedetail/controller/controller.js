@@ -20,6 +20,11 @@
         function activate() {
             if (!config.userDetails.name) {
                 $state.go('login');
+            } else {
+                if (config.userDetails.photo) {
+                    homeDetailVm.userImage = config.API_URL.serverUrl + config.userDetails.photo;
+                    console.log("homeDetailVm.userImage" + homeDetailVm.userImage);
+                }
             }
             homeDetailVm.userDetails = config.userDetails;
             var joiningYear = new Date(parseFloat(config.userDetails.admissionDateMilli));

@@ -137,7 +137,7 @@ angular.module(appName, ['ionic'])
 
     .state('header.notifications', {
         url: "notifications",
-         title: 'Notifications',
+         title: 'News',
          views:{
             'menuContent': {
                 templateUrl: "app/notifications/templates/notifications.html",

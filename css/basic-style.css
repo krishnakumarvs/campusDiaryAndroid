@@ -118,3 +118,7 @@ ion-nav-view, .pane {
 .col.search-icon{
   text-align: right;
 }
+
+.full-border {
+  border: 1px solid;
+}

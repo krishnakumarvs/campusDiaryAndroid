@@ -8,7 +8,9 @@
         editUserDetails: prefix + "editUserDetails",
         getMainTimeTable: prefix + "getMainTimeTable",
         getSeriesTimeTable: prefix + "getSeriesTimeTable",
-        sendFeedback: prefix + "sendFeedback"
+        sendFeedback: prefix + "sendFeedback",
+        getSyllabus: prefix + "getSyllabus",
+        sendUnionPost: prefix + "sendUnionPost"
     };
 
     var userDetails = {};

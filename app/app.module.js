@@ -82,11 +82,11 @@ angular.module(appName, ['ionic'])
 
     .state('header.sylabus', {
         url: "sylabus",
-         title: 'Sylabus',
+         title: 'Syllabus',
          views:{
             'menuContent': {
                 templateUrl: "app/sylabus/templates/sylabus.html",
-                controller: 'SylabusController as sylabus'
+                controller: 'SylabusController as Sylabus'
             }
         }
     })

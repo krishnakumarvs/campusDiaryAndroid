@@ -16,6 +16,7 @@
         var unionpostVm = this;
         // Variable declarations
         unionpostVm.postMessage = "";
+        unionpostVm.postAudience = "All";
         unionpostVm.sendpostMessage = sendpostMessage;
 
         activate();
@@ -27,18 +28,19 @@
         }
 
         function sendpostMessage() {
+
             $http({
                 method: "POST",
-                url: config.API_URL.sendpostMessage,
+                url: config.API_URL.sendUnionPost,
                 data: {
-                    semester: config.userDetails.semester,
-                    branch: config.userDetails.branch,
-                    college_id: config.userDetails.college_id,
-                    userId: config.userDetails.userId,
-                    postMessage: unionpostVm.postMessage
+                    title: unionpostVm.postTitle,
+                    postMessage: unionpostVm.postMessage,
+                    audience: (unionpostVm.postAudience == "All") ? "All" : config.userDetails.college_id,
+                    owner_id: config.userDetails.userId
                 }
             }).then(function mySucces(response) {
                 console.log(response.data);
+                unionpostVm.postTitle = "";
                 unionpostVm.postMessage = "";
                 var api_result = response.data.result;
                 if (api_result) {

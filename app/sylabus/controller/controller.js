@@ -8,42 +8,42 @@
         /**
          * Login Controller.
          */
-        .controller('SylabusController', Login);
+        .controller('SylabusController', Sylabus);
 
-    Login.$inject = ['$state', '$filter'];
+    Sylabus.$inject = ['$state', '$filter', '$http', 'config'];
 
-    function Login($state, $filter) {
+    function Sylabus($state, $filter, $http, config) {
 
-        var loginVm = this;
-        // Variable declarations
-        loginVm.currentUser = {};
-        loginVm.currentUser.email = "";
-        loginVm.currentUser.password = "";
-
-        loginVm.clicked = clicked;
-
-        // Function declarations
-        loginVm.authinticateUser = authinticateUser;
-        loginVm.SignUp = SignUp;
+        var syllabusVm = this;
+        syllabusVm.subject = "Operating System";
+        syllabusVm.revision_code = "4444";
+        syllabusVm.getSyllabus = getSyllabus;
 
         activate();
 
         function activate() {
-            // To initialize anything before the project starts
+
         }
 
-        function clicked() {
-            alert(123);
-        }
-
-
-        function authinticateUser() {
-            console.log("Clicked on authenticate user");
-            $state.go('header.home');
-        }
-
-        function SignUp() {
-            $state.go('registration');
+        function getSyllabus() {
+            syllabusVm.syllabusDetails = "";
+            $http({
+                method: "POST",
+                url: config.API_URL.getSyllabus,
+                data: {
+                    subject: syllabusVm.subject,
+                    revision_code: syllabusVm.revision_code
+                }
+            }).then(function mySucces(response) {
+                var api_result = response.data.result;
+                if (api_result) {
+                    syllabusVm.syllabusDetails = response.data.payload;
+                } else {
+                    alert(response.data.description);
+                }
+            }, function myError(response) {
+                console.log(response);
+            });
         }
     }
 

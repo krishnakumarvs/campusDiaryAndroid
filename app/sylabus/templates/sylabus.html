@@ -12,7 +12,7 @@
 						<div class="list list-inset sylabus-text">
 						  <label class="item item-input">
 						    <i class="icon ion-search placeholder-icon"></i>
-						    <input type="text" class="text-style" placeholder="Subject">
+						    <input type="text" class="text-style" placeholder="Subject" ng-model="Sylabus.subject">
 						  </label>
 						</div>
 						</div>
@@ -20,7 +20,7 @@
 							<div class="list list-inset sylabus-text">
 						  	<label class="item item-input">
 						    <i class="icon ion-search placeholder-icon"></i>
-						    <input type="text" class="text-style" placeholder="Revision">
+						    <input type="text" class="text-style" placeholder="Revision" ng-model="Sylabus.revision_code">
 						  	</label>
 							</div>
 							</div>
@@ -31,12 +31,12 @@
 							<div class="col-10">
 							</div>
 							<div class="col search-icon">
-								<img src="img/search-icon.png">
+								<img src="img/search-icon.png" ng-click="Sylabus.getSyllabus()">
 							</div>
 							<div class="col-10">
 							</div>
 						</div>
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_1">
 						<div class="col-10">
 						</div>
 						<div class="col">
@@ -45,17 +45,16 @@
 						<div class="col-10">
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_1">
 						<div class="col-10">
 						</div>
-						<div class="col">
-							<input type="text" class="text-style" name="module1">
+						<div class="col">{{Sylabus.syllabusDetails.module_1}}
 						</div>
 						<div class="col-10">
 						</div>
 					</div>
 
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_2">
 						<div class="col-10">
 						</div>
 						<div class="col">
@@ -64,17 +63,16 @@
 						<div class="col-10">
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_2">
 						<div class="col-10">
 						</div>
-						<div class="col">
-							<input type="text" class="text-style" name="module2">
+						<div class="col">{{Sylabus.syllabusDetails.module_2}}
 						</div>
 						<div class="col-10">
 						</div>
 					</div>
 
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_3">
 						<div class="col-10">
 						</div>
 						<div class="col">
@@ -83,17 +81,16 @@
 						<div class="col-10">
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_3">
 						<div class="col-10">
 						</div>
-						<div class="col">
-							<input type="text" class="text-style" name="module2">
+						<div class="col">{{Sylabus.syllabusDetails.module_3}}
 						</div>
 						<div class="col-10">
 						</div>
 					</div>
 
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_4">
 						<div class="col-10">
 						</div>
 						<div class="col">
@@ -102,11 +99,10 @@
 						<div class="col-10">
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" ng-if="Sylabus.syllabusDetails.module_4">
 						<div class="col-10">
 						</div>
-						<div class="col">
-							<input type="text" class="text-style" name="module2">
+						<div class="col">{{Sylabus.syllabusDetails.module_4}}
 						</div>
 						<div class="col-10">
 						</div>

@@ -5,16 +5,29 @@
      * Get the main module (shared for Workout).
      */
     angular.module(appName)
-    /**
-     * Header Controller.
-     */
-    .controller('HeaderController', Header);
+        /**
+         * Header Controller.
+         */
+        .controller('HeaderController', Header);
 
-    Header.$inject = ['$state'];
+    Header.$inject = ['$state', 'config'];
 
-    function Header($state) {
+    function Header($state, config) {
         var headerVm = this;
         headerVm.goToPage = goToPage;
+        headerVm.showUnionLink = false;
+
+        activate();
+
+        function activate() {
+            headerVm.userDetails = config.userDetails;
+            console.log("loading header.....");
+            if (headerVm.userDetails && headerVm.userDetails.union_member && headerVm.userDetails.union_member == "true") {
+                headerVm.showUnionLink = true;
+            }
+
+
+        }
 
         function goToPage(pageNo) {
             switch (pageNo) {

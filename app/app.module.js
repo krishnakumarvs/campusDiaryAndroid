@@ -124,6 +124,17 @@ angular.module(appName, ['ionic'])
         }
     })
 
+    .state('header.unionpost', {
+        url: "unionpost",
+         title: 'UnionPost',
+         views:{
+            'menuContent': {
+                templateUrl: "app/unionpost/templates/unionpost.html",
+                controller: 'UnionPostController as UnionPost'
+            }
+        }
+    })
+
     .state('header.notifications', {
         url: "notifications",
          title: 'Notifications',

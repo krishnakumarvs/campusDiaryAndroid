@@ -141,7 +141,7 @@ angular.module(appName, ['ionic'])
          views:{
             'menuContent': {
                 templateUrl: "app/notifications/templates/notifications.html",
-                controller: 'NotificationsController as Notification'
+                controller: 'NotificationsController as News'
             }
         }
     })

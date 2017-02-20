@@ -10,33 +10,37 @@
          */
         .controller('NotificationsController', Notification);
 
-    Notification.$inject = ['$state', '$filter'];
+    Notification.$inject = ['$state', '$filter', 'config', '$http'];
 
-    function Notification($state, $filter) {
-        var notificationVm = this;
-        // Variable declarations
-        notificationVm.currentUser = {};
-        notificationVm.currentUser.email = "";
-        notificationVm.currentUser.password = "";
-
-        // Function declarations
-        notificationVm.authinticateUser = authinticateUser;
-        notificationVm.SignUp = SignUp;
+    function Notification($state, $filter, config, $http) {
+        var newsVm = this;
 
         activate();
 
         function activate() {
-            // To initialize anything before the project starts
-        }
-
-
-        function authinticateUser() {
-            console.log("Clicked on authenticate user");
-            $state.go('header.home');
-        }
-
-        function SignUp() {
-            $state.go('registration');
+            if (!config.userDetails.name) {
+                $state.go('login');
+            } else {
+                $http({
+                    method: "POST",
+                    url: config.API_URL.getNews,
+                    data: {
+                        userId: config.userDetails.userId,
+                        college_id: config.userDetails.college_id
+                    }
+                }).then(function mySucces(response) {
+                    var api_result = response.data.result;
+                    if (api_result) {
+                        console.log("News fetching success");
+                        console.log(response.data.payload);
+                        newsVm.allNews = response.data.payload;
+                    } else {
+                        alert(response.data.description);
+                    }
+                }, function myError(response) {
+                    console.log(response.statusText);
+                });
+            }
         }
     }
 

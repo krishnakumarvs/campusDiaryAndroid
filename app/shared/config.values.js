@@ -10,7 +10,8 @@
         getSeriesTimeTable: prefix + "getSeriesTimeTable",
         sendFeedback: prefix + "sendFeedback",
         getSyllabus: prefix + "getSyllabus",
-        sendUnionPost: prefix + "sendUnionPost"
+        sendUnionPost: prefix + "sendUnionPost",
+        getNews: prefix + "getNews"
     };
 
     var userDetails = {};

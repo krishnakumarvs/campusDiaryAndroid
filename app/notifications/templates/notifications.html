@@ -6,30 +6,25 @@
 			</div>
 			 <div class="col">
 				<div class ="row">
-						<div class="col-10">
-						</div>
-						<div class="col"><h4>News</h4>
-						</div>
-						<div class="col-10">
-						</div>
+					<div class="col-10">
+					</div>
+					<div class="col"><h4>News</h4>
+					</div>
+					<div class="col-10">
+					</div>
 				</div>
-					<div class="row">
-						<div class="col">title
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">Some descriptions here Some descriptions here Some descriptions here Some descriptions here
-						</div>
-					</div>
+				
 
+				<div ng-repeat="news in News.allNews">
 					<div class="row">
-						<div class="col">title
+						<div class="col">{{news.title}}
+							<span style="float:right">{{news.date_milli | date : 'dd MMM yyyy'}}</span>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col">Some descriptions here Some descriptions here Some descriptions here Some descriptions here
-						</div>
+						<div class="col">{{news.description}}</div>
 					</div>
+				</div>
 							
 		</div>
 			<div class ="col-10">

@@ -1,6 +1,6 @@
 (function() {
 
-    var prefix = "http://localhost:4567/";
+    var prefix = "http://192.168.1.2:4567/";
     var API_URL = {
         serverUrl: prefix,
         login: prefix + "login",
@@ -11,7 +11,8 @@
         sendFeedback: prefix + "sendFeedback",
         getSyllabus: prefix + "getSyllabus",
         sendUnionPost: prefix + "sendUnionPost",
-        getNews: prefix + "getNews"
+        getNews: prefix + "getNews",
+        fileUpload: prefix + "upload"
     };
 
     var userDetails = {};

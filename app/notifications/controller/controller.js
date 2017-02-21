@@ -15,6 +15,7 @@
     function Notification($state, $filter, config, $http) {
         var newsVm = this;
 
+        newsVm.serverUrl = config.API_URL.serverUrl;
         activate();
 
         function activate() {

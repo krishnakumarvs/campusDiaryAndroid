@@ -58,6 +58,7 @@
                 }
             }, function myError(response) {
                 console.log(response.statusText);
+                alert(response.statusText)
             });
 
             //$state.go('header.home');

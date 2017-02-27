@@ -5,19 +5,9 @@
 			<div class ="col-10">
 			</div>
 			 <div class="col">
-				<div class ="row">
-					<div class="col-10">
-					</div>
-					<div class="col"><h4>News</h4>
-					</div>
-					<div class="col-10">
-					</div>
-				</div>
-				
-
-				<div ng-repeat="news in News.allNews">
+				<div ng-repeat="news in News.allNews" class="each-news-row">
 					<div class="row">
-						<div class="col">{{news.title}}
+						<div class="col" style="font-weight: bold;">{{news.title}}
 							<span style="float:right">{{news.date_milli | date : 'dd MMM yyyy'}}</span>
 						</div>
 					</div>

@@ -17,10 +17,11 @@
         var loginVm = this;
         // Variable declarations
         loginVm.currentUser = {};
-        loginVm.currentUser.email = "krishjh_mea@yahoo.imn";
-        loginVm.currentUser.password = "722017";
+        loginVm.currentUser.email = ""; //krishjh_mea@yahoo.imn
+        loginVm.currentUser.password = ""; //722017
 
         loginVm.clicked = clicked;
+        loginVm.changeServerIp = changeServerIp;
 
         // Function declarations
         loginVm.authinticateUser = authinticateUser;
@@ -35,9 +36,18 @@
             alert(123);
         }
 
+        function changeServerIp() {
+            var newPrefix = window.prompt("Enter server url", config.prefix);
+            if (newPrefix) {
+                config.prefix = newPrefix;
+                config.recalculateUrls(newPrefix);
+                console.log(newPrefix);
+                console.log(config.prefix);
+            }
+        }
 
         function authinticateUser() {
-            console.log("Clicked on authenticate user");
+            console.log("Clicked on authenticate user " + config.API_URL.login);
             console.log(loginVm.currentUser);
             $http({
                 method: "POST",

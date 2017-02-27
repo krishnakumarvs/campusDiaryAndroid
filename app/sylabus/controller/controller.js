@@ -15,8 +15,8 @@
     function Sylabus($state, $filter, $http, config) {
 
         var syllabusVm = this;
-        syllabusVm.subject = "Operating System";
-        syllabusVm.revision_code = "4444";
+        syllabusVm.subject = ""; //Operating System
+        syllabusVm.revision_code = ""; //4444
         syllabusVm.getSyllabus = getSyllabus;
 
         activate();

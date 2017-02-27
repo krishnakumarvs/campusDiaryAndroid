@@ -26,7 +26,8 @@ ion-nav-view, .pane {
 }
 
 .bar-stable .button.button-clear , .bar.bar-stable .title {
-  color: white !important;
+  color: #000000 !important;
+  font-weight: bold !important;
 }
 
 .font-size-18 {
@@ -105,6 +106,7 @@ ion-nav-view, .pane {
 
 .home-notification-title {
   background: #5414de;
+  color: white !important;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -121,4 +123,13 @@ ion-nav-view, .pane {
 
 .full-border {
   border: 1px solid;
+}
+
+.home-detail-page {
+  font-weight: bold;
+}
+
+.each-news-row {
+      border-bottom: 2px solid rgba(176, 130, 202, 0.38);
+      margin-bottom: 10px;
 }

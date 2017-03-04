@@ -133,3 +133,7 @@ ion-nav-view, .pane {
       border-bottom: 2px solid rgba(176, 130, 202, 0.38);
       margin-bottom: 10px;
 }
+
+.img-align{
+  text-align: right;
+}

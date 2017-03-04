@@ -135,6 +135,17 @@ angular.module(appName, ['ionic'])
         }
     })
 
+     .state('header.mypost', {
+        url: "mypost",
+         title: 'MyPost',
+         views:{
+            'menuContent': {
+                templateUrl: "app/mypost/templates/mypost.html",
+                controller: 'MyPostController as MyPost'
+            }
+        }
+    })
+
     .state('header.notifications', {
         url: "notifications",
          title: 'News',

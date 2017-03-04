@@ -6,7 +6,7 @@
 				</div> -->
 				<div class="col">
 					<div class="row">
-						<div class="col-50 full-border"><h4>SUBJECT</H4>
+						<div class="col-50 full-border align-center"><h4>SUBJECT</H4>
 						</div>
 
 						<div class="col-25 full-border align-center"><h4>DATE</H4>
@@ -18,7 +18,7 @@
 					</div>
 					
 					<div class="row" ng-repeat="timeTable in Timetable.timetables">
-						<div class="col-50 full-border">{{timeTable.subject_name}}</div>
+						<div class="col-50 full-border text-style">{{timeTable.subject_name}}</div>
 
 						<div class="col-25 full-border align-center">{{timeTable.date_milli | date : 'MMM dd'}}</div>
 

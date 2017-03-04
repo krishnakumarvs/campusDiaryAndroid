@@ -27,11 +27,15 @@
 				</ion-item>
 
 				<ion-item nav-clear menu-close href="index.html#/notifications" class="no-padding">
-					<div class="recuerda-slide-menu"ng-click="Header.goToPage(6)"><img src="img/rr.png" class="image-style" width=10%/>  News</div>
+					<div class="recuerda-slide-menu"ng-click="Header.goToPage(6)"><img src="img/bell.png" class="image-style" width=10%/>  News</div>
 				</ion-item>
 
 				<ion-item nav-clear menu-close href="index.html#/unionpost" class="no-padding" ng-if="Header.showUnionLink">
-					<div class="recuerda-slide-menu"ng-click="Header.goToPage(6)"><img src="img/rr.png" class="image-style" width=10%/>  Union Post</div>
+					<div class="recuerda-slide-menu"ng-click="Header.goToPage(6)"><img src="img/post.png" class="image-style" width=10%/>  Union Post</div>
+				</ion-item>
+
+				<ion-item nav-clear menu-close href="index.html#/mypost" class="no-padding" ng-if="Header.showUnionLink">
+					<div class="recuerda-slide-menu"ng-click="Header.goToPage(6)"><img src="img/mypost.png" class="image-style" width=10%/>  My Post</div>
 				</ion-item>
 
 

@@ -25,7 +25,7 @@
             } else {
                 $http({
                     method: "POST",
-                    url: config.API_URL.getNews,
+                    url: config.API_URL.getMyNews,
                     data: {
                         userId: config.userDetails.userId,
                         college_id: config.userDetails.college_id
@@ -45,9 +45,29 @@
             }
         }
 
-        function deletePost(){
-            console.log("close");
+         function deletePost(news) {
+
+
+            console.log(news);
+
+            $http({
+                method: "POST",
+                url: config.API_URL.deletePost,
+                data: {
+                    newsId:news.id
+                }
+            }).then(function mySucces(response) {
+                var api_result = response.data.result;
+                if (api_result) {
+                    activate();
+                } else {
+                    alert(response.data.description);
+                }
+            }, function myError(response) {
+                console.log(response.statusText);
+            });
         }
+
     }
 
 })();

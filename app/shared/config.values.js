@@ -12,7 +12,9 @@
         getSyllabus: prefix + "getSyllabus",
         sendUnionPost: prefix + "sendUnionPost",
         getNews: prefix + "getNews",
-        fileUpload: prefix + "upload"
+        fileUpload: prefix + "upload",
+        getMyNews: prefix + "getMyNews",
+        deletePost:prefix + "deletePost"
     };
 
     function recalculateUrls(prefix) {

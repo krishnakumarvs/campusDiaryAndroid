@@ -112,6 +112,18 @@ angular.module(appName, ['ionic'])
             }
         }
     })
+
+
+    .state('header.changepassword', {
+        url: "changepassword",
+         title: 'CHANGE PASSWORD',
+         views:{
+            'menuContent': {
+                templateUrl: "app/changepassword/templates/changepassword.html",
+                controller: 'ChangePasswordController as ChangePassword'
+            }
+        }
+    })
     
     .state('header.feedback', {
         url: "feedback",

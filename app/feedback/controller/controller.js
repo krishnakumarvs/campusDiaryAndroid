@@ -16,6 +16,7 @@
         var feedbackVm = this;
         // Variable declarations
         feedbackVm.feedbackMessage = "";
+        feedbackVm.feedbackTitle = "";
         feedbackVm.sendFeedback = sendFeedback;
 
         activate();
@@ -35,10 +36,12 @@
                     branch: config.userDetails.branch,
                     college_id: config.userDetails.college_id,
                     userId: config.userDetails.userId,
-                    feedbackMessage: feedbackVm.feedbackMessage
+                    feedbackMessage: feedbackVm.feedbackMessage,
+                    feedbackTitle: feedbackVm.feedbackTitle
                 }
             }).then(function mySucces(response) {
                 console.log(response.data);
+                feedbackVm.feedbackTitle="";
                 feedbackVm.feedbackMessage = "";
                 var api_result = response.data.result;
                 if (api_result) {

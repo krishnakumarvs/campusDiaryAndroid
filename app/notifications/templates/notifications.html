@@ -7,6 +7,13 @@
 			 <div class="col">
 				<div ng-repeat="news in News.allNews" class="each-news-row">
 					<div class="row">
+						<div class="col img-align">
+							<a download="{{News.serverUrl+news.pic}}" href="{{News.serverUrl+news.pic}}" title="ImageName">
+							    <img src="img/save.png" width="5%" ng-click="News.savePost(news.pic)">
+							</a>
+						</div>
+					</div>
+					<div class="row">
 						<div class="col" style="font-weight: bold;">{{news.title}}
 							<span style="float:right">{{news.date_milli | date : 'dd MMM yyyy'}}</span>
 						</div>

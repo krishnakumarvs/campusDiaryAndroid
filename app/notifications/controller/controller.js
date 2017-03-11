@@ -16,6 +16,7 @@
         var newsVm = this;
 
         newsVm.serverUrl = config.API_URL.serverUrl;
+        newsVm.savePost = savePost;
         activate();
 
         function activate() {
@@ -42,6 +43,17 @@
                     console.log(response.statusText);
                 });
             }
+        }
+
+        function savePost(pic) {
+            if (pic) {
+                var dowloadLink = newsVm.serverUrl + pic;
+                console.log(dowloadLink);
+                
+            }else {
+                alert("No image to download");
+            }
+
         }
     }
 

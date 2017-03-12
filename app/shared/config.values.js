@@ -17,7 +17,8 @@
         deletePost: prefix + "deletePost",
         changePassword: prefix + "changePassword",
         getNextSeriesExamDate: prefix + "getNextSeriesExamDate",
-        getNextUniversityExamDate: prefix + "getNextUniversityExamDate"
+        getNextUniversityExamDate: prefix + "getNextUniversityExamDate",
+        resetPassword: prefix + "forgotPassword"
     };
 
     function recalculateUrls(prefix) {

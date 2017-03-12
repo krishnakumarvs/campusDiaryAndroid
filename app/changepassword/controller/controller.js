@@ -48,7 +48,6 @@
                             var api_result = response.data.result;
                             if (api_result) {
                                 alert(response.data.description);
-                                config.userDetails = response.data.payload;
                                 $state.go('header.home');
                             } else {
                                 alert(response.data.description);

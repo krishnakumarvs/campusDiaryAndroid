@@ -421,7 +421,7 @@ ion-side-menus .item-complex .item-content, ion-side-menus .item, ion-side-menus
 ion-nav-view, .pane{background: inherit !important;}
 
 ion-nav-view .login-page, .pane .login-page{
-  background:url(../img/home-bg.jpg) no-repeat center top !important;
+  background:url(../img/backorg.jpg) no-repeat center top !important;
   background-size: cover !important;
 }
 .hirs-loader{

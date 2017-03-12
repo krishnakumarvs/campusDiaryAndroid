@@ -141,3 +141,19 @@ ion-nav-view, .pane {
 .img-align{
   text-align: right;
 }
+.rstyle {
+    color: red;
+}
+
+.bcolorinput {
+    background-color: #999999;
+}
+
+.lettercolor {
+    background-color: #000033 !important;
+    border-color: red;
+}
+
+.bcolor {
+    background-color: #333366;
+}

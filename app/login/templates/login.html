@@ -4,30 +4,33 @@
 			<div class="icon ion-gear-a float-right" style="margin-right:10px;margin-top:10px" ng-click="Login.changeServerIp()"></div>
 			<div class="row">
 				<div class="col-10"></div>
-				<div class="col"><img src="img/login-icon.png" width="100%" /></div>
+				<div class="col"><img src="img/newlog.png" width="100%" /></div>
 				<div class="col-10"></div>
 			</div>
 			<div class="row">
 			  <div class="col-10"></div>
-			  <div class="col">
-			  	
+			  <div class="col list">
+			  	<label class="item item-input item-floating-label bcolorinput">
+                    <span class="input-label" style="color: #000033;">Username</span>
+                    <input type="text" placeholder="Username" style="color:white;" ng-model="Login.currentUser.email">
+                </label>
+                <label class="item item-input item-floating-label bcolorinput">
+                    <span  class="input-label" style="color: #000033;">Password</span>
+                    <input type="password" placeholder="Password" style="color:white;" ng-model="Login.currentUser.password">
+                </label>
+            </div>			  	
 			  	<!-- <div class="col loginOrSignup">Login or Sign up</div><br> -->
-
-			  	<input type="text" class="userimage text-style"ng-model="Login.currentUser.email" placeholder="User name"></input>
-			  	<br>
-			  	<input type="password" class="passwordimage text-style"ng-model="Login.currentUser.password" placeholder="Password"></input>
-			  </div>
 			  <div class="col-10"></div>
 			</div> 
 			<div class="row button-margin login-top">
 			  	<div class="col-10"></div>
 			  	<div class="col">
-			  		<button class="button button-block button-royal button-login reg-color" ng-click="Login.authinticateUser()">LOGIN</button>
+			  		<button class="button button-block button-royal button-login reg-color lettercolor" ng-click="Login.authinticateUser()">LOGIN</button>
 			  	</div>
 			  	<div class="col-10"></div>
 			</div>	
 
-			<center><a href="index.html#/forgotpassword">Forgot Password</a></center>
+			<center><a href="index.html#/forgotpassword" style="color:red;">Forgot Password</a></center>
 		</div>
 	</ion-content>
 </ion-view>

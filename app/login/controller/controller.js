@@ -17,8 +17,8 @@
         var loginVm = this;
         // Variable declarations
         loginVm.currentUser = {};
-        loginVm.currentUser.email = ""; //krishjh_mea@yahoo.imn
-        loginVm.currentUser.password = ""; //722017
+        loginVm.currentUser.email = "k@k.com"; //krishjh_mea@yahoo.imn
+        loginVm.currentUser.password = "123"; //722017
 
         loginVm.clicked = clicked;
         loginVm.changeServerIp = changeServerIp;
@@ -68,7 +68,7 @@
                 }
             }, function myError(response) {
                 console.log(response.statusText);
-                alert(response.statusText)
+                alert("Could not connect with server");
             });
 
             //$state.go('header.home');

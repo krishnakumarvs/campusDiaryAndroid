@@ -14,8 +14,10 @@
         getNews: prefix + "getNews",
         fileUpload: prefix + "upload",
         getMyNews: prefix + "getMyNews",
-        deletePost:prefix + "deletePost",
-        changePassword:prefix + "changePassword"
+        deletePost: prefix + "deletePost",
+        changePassword: prefix + "changePassword",
+        getNextSeriesExamDate: prefix + "getNextSeriesExamDate",
+        getNextUniversityExamDate: prefix + "getNextUniversityExamDate"
     };
 
     function recalculateUrls(prefix) {

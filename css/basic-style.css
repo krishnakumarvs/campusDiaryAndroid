@@ -110,6 +110,10 @@ ion-nav-view, .pane {
   border-radius: 10px 10px 0px 0px;
 }
 
+.home-notification-title.red {
+  background: red;
+}
+
 .home-notification-description {
   background: rgba(84, 20, 222, 0.22);
     border-radius: 0px 0px 10px 10px;

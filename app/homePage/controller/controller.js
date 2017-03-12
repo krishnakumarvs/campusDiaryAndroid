@@ -45,6 +45,46 @@
                 }, function myError(response) {
                     console.log(response.statusText);
                 });
+
+                // check for series exam time table
+                $http({
+                    method: "POST",
+                    url: config.API_URL.getNextSeriesExamDate,
+                    data: {
+                        semester: config.userDetails.semester,
+                        branch: config.userDetails.branch,
+                        college_id: config.userDetails.college_id,
+                    }
+                }).then(function mySucces(response) {
+                    console.log(response.data);
+                    var api_result = response.data.result;
+                    if (api_result) {
+                        console.log("Have series exam in near days");
+                        homeVm.nextSeriesExam = response.data.payload;
+                    }
+                }, function myError(response) {
+                    console.log(response.statusText);
+                });
+
+                // check for university exam time table
+                $http({
+                    method: "POST",
+                    url: config.API_URL.getNextUniversityExamDate,
+                    data: {
+                        semester: config.userDetails.semester,
+                        branch: config.userDetails.branch,
+                        college_id: config.userDetails.college_id
+                    }
+                }).then(function mySucces(response) {
+                    console.log(response.data);
+                    var api_result = response.data.result;
+                    if (api_result) {
+                        console.log("Have university exam in near days");
+                        homeVm.nextUniversityExam = response.data.payload;
+                    }
+                }, function myError(response) {
+                    console.log(response.statusText);
+                });
             }
 
         }

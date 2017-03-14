@@ -61,7 +61,7 @@
                 var api_result = response.data.result;
                 if (api_result) {
                     console.log("Authentication success");
-                    $state.go('header.home');
+                    $state.go('home');
                     config.userDetails = response.data.payload;
                 } else {
                     alert(response.data.description);

@@ -22,7 +22,9 @@
         activate();
 
         function activate() {
-
+            if (!config.userDetails.name) {
+                $state.go('login');
+            }
         }
 
         function getSyllabus() {

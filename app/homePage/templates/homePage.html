@@ -1,11 +1,62 @@
+
+<div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+   <a href="" id="navigation-toggle" ng-click="toggleState()">&nbsp;</a>
+   <ul class="navigation">
+      <li class="navigation-items" style="padding-top: 35px;"> 
+      	<img src="img/sl.png" class="image-style float-left" style="padding-top: 7px;" width="10%" />
+      	<a href="index.html#/home">Home</a> 
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/pro1.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/editprofile" class=="float-left" >Edit profile</a>
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/time.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/timetable" class=="float-left" >TimeTable</a>
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/calender.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/seriestimetable" class=="float-left" >SeriesTimeTable</a>
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/g.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/sylabus" class=="float-left" >Sylabus</a>
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/bell.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/notifications" class=="float-left" >News</a>
+      </li>
+
+      <li class="navigation-items" ng-if="showUnionLink"> 
+      	<img src="img/post.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/unionpost" class=="float-left" >Union Post</a>
+      </li>
+
+      <li class="navigation-items" ng-if="showUnionLink">
+      	<img src="img/mypost.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/mypost" class=="float-left" >My Post</a>
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/feedback.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
+      	<a href="index.html#/feedback" class=="float-left" >FeedBack</a>
+      </li>
+
+      <li class="navigation-items"> 
+      	<img src="img/logout.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/ ng-click="logout()">
+      	<a href="" class=="float-left" ng-click="logout()">Logout</a>
+      </li>
+   </ul>
+</div>
+
 <ion-view title={{pageTitle}}>
 	<ion-content class="tasks-page">
 		<div class="ion-content">
-			<!--  <div class="row">
-			  <div class="col"></div>
-			  <div class="col tasks-page-title">TASKS</div>
-			  <div class="col"></div>
-			</div>-->  
 			<div class="row">
 				<div class="col">
 					<center>

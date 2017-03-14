@@ -65,139 +65,92 @@ angular.module(appName, ['ionic'])
         title: 'Header'
     })
 
-    .state('header.timetable', {
-        url: "timetable",
+    .state('timetable', {
+        url: "/timetable",
          title: 'TimeTable',
-         views:{
-            'menuContent': {
-                templateUrl: "app/timetable/templates/timetable.html",
-                controller: 'TimetableController as Timetable'
-            }
-        }
+         templateUrl: "app/timetable/templates/timetable.html",
+         controller: 'TimetableController as Timetable'
     })
 
-    .state('header.homedetail', {
-        url: "homedetail",
+    .state('homedetail', {
+        url: "/homedetail",
          title: 'Profile',
-         views:{
-            'menuContent': {
-                templateUrl: "app/homedetail/templates/homedetail.html",
-                controller: 'HomeDetailController as HomeDetail'
-            }
-        }
+         templateUrl: "app/homedetail/templates/homedetail.html",
+         controller: 'HomeDetailController as HomeDetail'
     })
 
-    .state('header.sylabus', {
-        url: "sylabus",
+    .state('sylabus', {
+        url: "/sylabus",
          title: 'Syllabus',
-         views:{
-            'menuContent': {
-                templateUrl: "app/sylabus/templates/sylabus.html",
-                controller: 'SylabusController as Sylabus'
-            }
-        }
+         templateUrl: "app/sylabus/templates/sylabus.html",
+         controller: 'SylabusController as Sylabus'
     })
 
-    .state('header.seriestimetable', {
-        url: "seriestimetable",
+    .state('seriestimetable', {
+        url: "/seriestimetable",
          title: 'SeriesTimeTable',
-         views:{
-            'menuContent': {
-                templateUrl: "app/seriestimetable/templates/seriestimetable.html",
-                controller: 'SeriesTimetableController as Series'
-            }
-        }
+         templateUrl: "app/seriestimetable/templates/seriestimetable.html",
+         controller: 'SeriesTimetableController as Series'
     })
-    
-    .state('header.editprofile', {
-        url: "editprofile",
+
+    .state('editprofile', {
+        url: "/editprofile",
          title: 'EDIT PROFILE',
-         views:{
-            'menuContent': {
-                templateUrl: "app/editprofile/templates/editprofile.html",
-                controller: 'EditprofileController as Editprofile'
-            }
-        }
+         templateUrl: "app/editprofile/templates/editprofile.html",
+         controller: 'EditprofileController as Editprofile'
     })
 
 
-    .state('header.changepassword', {
-        url: "changepassword",
+    .state('changepassword', {
+        url: "/changepassword",
          title: 'CHANGE PASSWORD',
-         views:{
-            'menuContent': {
-                templateUrl: "app/changepassword/templates/changepassword.html",
-                controller: 'ChangePasswordController as ChangePassword'
-            }
-        }
+         templateUrl: "app/changepassword/templates/changepassword.html",
+         controller: 'ChangePasswordController as ChangePassword'
     })
     
-    .state('header.feedback', {
-        url: "feedback",
+    .state('feedback', {
+        url: "/feedback",
          title: 'FeedBack',
-         views:{
-            'menuContent': {
-                templateUrl: "app/feedback/templates/feedback.html",
-                controller: 'FeedbackController as Feedback'
-            }
-        }
+         templateUrl: "app/feedback/templates/feedback.html",
+         controller: 'FeedbackController as Feedback'
     })
 
-    .state('header.unionpost', {
-        url: "unionpost",
+    .state('unionpost', {
+        url: "/unionpost",
          title: 'UnionPost',
-         views:{
-            'menuContent': {
-                templateUrl: "app/unionpost/templates/unionpost.html",
-                controller: 'UnionPostController as UnionPost'
-            }
-        }
+         templateUrl: "app/unionpost/templates/unionpost.html",
+         controller: 'UnionPostController as UnionPost'
     })
 
-     .state('header.mypost', {
-        url: "mypost",
+     .state('mypost', {
+        url: "/mypost",
          title: 'MyPost',
-         views:{
-            'menuContent': {
-                templateUrl: "app/mypost/templates/mypost.html",
-                controller: 'MyPostController as MyPost'
-            }
-        }
+         templateUrl: "app/mypost/templates/mypost.html",
+         controller: 'MyPostController as MyPost'
+         
     })
 
-    .state('header.notifications', {
-        url: "notifications",
+    .state('notifications', {
+        url: "/notifications",
          title: 'News',
-         views:{
-            'menuContent': {
-                templateUrl: "app/notifications/templates/notifications.html",
-                controller: 'NotificationsController as News'
-            }
-        }
+         templateUrl: "app/notifications/templates/notifications.html",
+         controller: 'NotificationsController as News'
     })
 
-    .state('header.home', {
-        url: "home",
+    .state('home', {
         title: 'Home',
-        views: {
-            'menuContent': {
-                templateUrl: "app/homePage/templates/homePage.html",
-                controller: 'HomePageController as Home'
-            }
-        }
+        url: "/home",
+        templateUrl: "app/homePage/templates/homePage.html",
+        controller: 'HomePageController as Home'
     })
 
-    .state('header.settings', {
-        url: "settings",
+    .state('settings', {
+        url: "/settings",
         parent: 'header',
         showHeader: true,
         title: 'Settings',
-        views: {
-            'menuContent': {
-                templateUrl: "app/settings/templates/settings.html",
-                controller: 'SettingsController as Settings'
-            }
-        }
+        templateUrl: "app/settings/templates/settings.html",
+        controller: 'SettingsController as Settings'
 
     });
 

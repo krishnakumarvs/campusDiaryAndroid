@@ -157,3 +157,52 @@ ion-nav-view, .pane {
 .bcolor {
     background-color: #333366;
 }
+
+body {
+    font-family : arial;
+}
+.sidebar {
+    position : absolute;
+    top : 0;
+    left : -250px;
+    transition : 100ms left;
+    background-color: #444;
+    height: 100% !important;
+    z-index: 9999999999999999999999999;
+}
+#navigation-toggle {
+        position: fixed;
+        left: 0px;
+        color: white;
+        text-decoration: none;
+        background: url(../img/menu_icon.png) no-repeat !important;
+        display: block;
+        width: 30px;
+        margin-left: 5px;
+            margin-top: 5px;
+}
+.show {
+    left : 0;
+}
+.navigation {
+    list-style : none;
+    padding : 0;
+    margin : 0;
+}
+.navigation-items a {
+    display : block;
+    background-color : #444;
+    color : white;
+    line-height : 2em;
+    text-decoration : none;
+    padding : 10px 30px;
+    width : 250px;
+
+}
+.navigation-items a:hover {
+    background-color : #222;
+}
+
+.navigation-items img {
+  margin-left: 10px !important;
+}

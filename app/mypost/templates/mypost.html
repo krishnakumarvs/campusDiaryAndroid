@@ -53,39 +53,39 @@
    </ul>
 </div>
 <ion-view title={{pageTitle}}>
-	<ion-content class="">
-		<div class="ion-content ">
-		<div class ="row">
-			<div class ="col-10">
-			</div>
-			 <div class="col">
-			 	
-				<div ng-repeat="news in MyPost.allNews" class="each-news-row">
-					<div class="row">
-						<div class="col img-align">
-							<img src="img/close.png" width="5%" ng-click="MyPost.deletePost(news)">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col" style="font-weight: bold;">{{news.title}}
-							<span style="float:right">{{news.date_milli | date : 'dd MMM yyyy'}}</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">{{news.description}}</div>
-					</div>
+      
+      <ion-content class="">
+            <div class="ion-content ">
+            <div class ="row">
+                  <div class ="col-10">
+                  </div>
+                   <div class="col">
+                        <div ng-repeat="news in MyPost.allNews" class="each-news-row">
+                              <div class="row">
+                                    <div class="col img-align">
+                                              <img src="img/close.png" width="5%" ng-click="MyPost.deletePost(news)">
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="col" style="font-weight: bold;">{{news.title}}
+                                          <span style="float:right">{{news.date_milli | date : 'dd MMM yyyy'}}</span>
+                                    </div>
+                              </div>
+                              <div class="row">
+                                    <div class="col">{{news.description}}</div>
+                              </div>
 
-					<div class="row" ng-if="news.pic">
-						<div class="col">
-							<img ng-src="{{MyPost.serverUrl+news.pic}}" style="width:100%">
-						</div>
-					</div>
-				</div>
-							
-		</div>
-			<div class ="col-10">
-			</div>
-		
-		</div>
-	</ion-content>
+                              <div class="row" ng-if="news.pic">
+                                    <div class="col">
+                                          <img ng-src="{{MyPost.serverUrl+news.pic}}" style="width:100%">
+                                    </div>
+                              </div>
+                        </div>
+                                          
+            </div>
+                  <div class ="col-10">
+                  </div>
+            
+            </div>
+      </ion-content>
 </ion-view>

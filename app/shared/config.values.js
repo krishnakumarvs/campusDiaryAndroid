@@ -1,6 +1,6 @@
 (function() {
 
-    var prefix = "http://192.168.1.4:4567/";
+    var prefix = "http://localhost:4567/";
     var API_URL = {
         serverUrl: prefix,
         login: prefix + "login",

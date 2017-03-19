@@ -21,8 +21,7 @@ h4, h5, h6{font-family:'open_sanssemibold',Helvetica,Arial,sans-serif !important
 
 .dashboarsd{}
 .login-error-message {
-  color: red;
-  font-weight: bold;
+  color: reds  font-weight: bold;
 }
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
@@ -773,7 +772,7 @@ ion-nav-view .login-page, .pane .login-page{
 }
 
 a:hover, a:focus {
-    color: #e9e9e9 !important;
+    color: #000033 !important;
     text-decoration: none;
     text-align: left;
 }

@@ -48,7 +48,9 @@
         function savePost(pic) {
             if (pic) {
                 var dowloadLink = newsVm.serverUrl + pic;
+
                 console.log(dowloadLink);
+                window.open(dowloadLink);
                 
             }else {
                 alert("No image to download");

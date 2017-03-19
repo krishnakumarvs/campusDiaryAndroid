@@ -125,8 +125,8 @@ angular.module(appName, ['ionic'])
      .state('mypost', {
         url: "/mypost",
          title: 'MyPost',
-         templateUrl: "app/mypost/templates/mypost.html",
-         controller: 'MyPostController as MyPost'
+         templateUrl: "app/notifications/templates/myNews.html",
+         controller: 'MyPostController as MyNews'
          
     })
 

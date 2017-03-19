@@ -48,7 +48,7 @@
                             var api_result = response.data.result;
                             if (api_result) {
                                 alert(response.data.description);
-                                $state.go('header.home');
+                                $state.go('home');
                             } else {
                                 alert(response.data.description);
                             }

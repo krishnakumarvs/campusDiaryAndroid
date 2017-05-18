@@ -61,29 +61,32 @@
 <ion-view title={{pageTitle}}>
 	<ion-content class="">
 		<div class="ion-content ">
+                   <div class="row navbarcreater">
+                      <div class="col"><center><h3 style="color: #00cc7a;">TIME TABLE</h3></center></div>
+                    </div>
 			<br>
 			<div class="row">
 				<!-- <div class="col-10">
 				</div> -->
 				<div class="col">
 					<div class="row">
-						<div class="col-50 full-border align-center"><h4>SUBJECT</H4>
+						<div class="col-50 full-border align-center tablecreater"><h5>SUBJECT</h5>
 						</div>
 
-						<div class="col-25 full-border align-center"><h4>DATE</H4>
+						<div class="col-25 full-border align-center tablecreater"><h5>DATE</h5>
 						</div>
 
-						<div class="col-25 full-border align-center"><h4>TIME</H4>
+						<div class="col-25 full-border align-center tablecreater"><h5>TIME</h5>
 						</div>
 
 					</div>
 					
 					<div class="row" ng-repeat="timeTable in Timetable.timetables">
-						<div class="col-50 full-border text-style">{{timeTable.subject_name}}</div>
+						<div class="col-50 full-border text-style tablerows">{{timeTable.subject_name}}</div>
 
-						<div class="col-25 full-border align-center">{{timeTable.date_milli | date : 'MMM dd'}}</div>
+						<div class="col-25 full-border align-center tablerows">{{timeTable.date_milli | date : 'MMM dd'}}</div>
 
-						<div class="col-25 full-border align-center">{{timeTable.time}}</div>
+						<div class="col-25 full-border align-center tablerows">{{timeTable.time}}</div>
 					</div>
 				</div>
 				<!-- <div class="col-10">

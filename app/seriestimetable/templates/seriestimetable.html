@@ -23,7 +23,7 @@
 
       <li class="navigation-items"> 
             <img src="img/g.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
-            <a href="index.html#/sylabus" class=="float-left" >Sylabus</a>
+            <a href="index.html#/sylabus" class=="float-left" >Syllabus</a>
       </li>
 
       <li class="navigation-items"> 
@@ -61,29 +61,33 @@
 <ion-view title={{pageTitle}}>
 	<ion-content class="">
 		<div class="ion-content ">
-			<br>
+			
+                   <div class="row navbarcreater">
+                      <div class="col"><center><h3 style="color: #00cc7a;"> SERIES TIME TABLE</h3></center></div>
+                    </div>
+                  <br>
 			<div class="row">
 				<!-- <div class="col-10">
 				</div> -->
 				<div class="col">
 					<div class="row">
-						<div class="col-50 full-border align-center"><h4>SUBJECT</H4>
+						<div class="col-50 full-border align-center tablecreater"><h5>SUBJECT</h5>
 						</div>
 
-						<div class="col-25 full-border align-center"><h4>DATE</H4>
+						<div class="col-25 full-border align-center tablecreater"><h5>DATE</h5>
 						</div>
 
-						<div class="col-25 full-border align-center"><h4>TIME</H4>
+						<div class="col-25 full-border align-center tablecreater"><h5>TIME</h5>
 						</div>
 
 					</div>
 					
 					<div class="row"  ng-repeat="timeTable in Series.timetables">
-						<div class="col-50 full-border align-center">{{timeTable.subject_name}}</div>
+						<div class="col-50 full-border align-center tablerows">{{timeTable.subject_name}}</div>
 
-						<div class="col-25 full-border align-center">{{timeTable.date_milli | date : 'MMM dd'}}</div>
+						<div class="col-25 full-border align-center tablerows">{{timeTable.date_milli | date : 'MMM dd'}}</div>
 
-						<div class="col-25 full-border align-center">{{timeTable.time}}</div>
+						<div class="col-25 full-border align-center tablerows">{{timeTable.time}}</div>
 					</div>
 				</div>
 

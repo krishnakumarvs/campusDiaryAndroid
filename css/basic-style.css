@@ -1,5 +1,5 @@
 ion-nav-view, .pane {
-    background:url(../img/slide-bg.jpg) no-repeat center top fixed !important;
+    background:url(../img/back1.png) no-repeat center top fixed !important;
 }
 
 .menu {
@@ -75,10 +75,12 @@ ion-nav-view, .pane {
 
 .text-style{
   padding-left: 10px !important;
+  border: 3px solid lightgrey !important;
 }
 .textarea-style{
   padding-left: 10px !important;
   height:70px;
+  border: 3px solid lightgrey !important;
 }
 
 .image-style{
@@ -205,4 +207,30 @@ body {
 
 .navigation-items img {
   margin-left: 10px !important;
+}
+.newbcolorforbutton{
+    border-color: #000033 !important;
+    background-color: #000033 !important;
+    color: #fff !important;
+
+}
+.navbarcreater{
+        background-color: #404040;
+}
+.tablecreater{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    background-color: #00994d;
+    color: white;
+
+}
+.tablerows{
+   border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+    background-color: #00e673;
+    color: white;
 }

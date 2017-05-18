@@ -23,7 +23,7 @@
 
       <li class="navigation-items"> 
       	<img src="img/g.png" class="image-style float-left"  style="padding-top: 7px;" width="10%"/>
-      	<a href="index.html#/sylabus" class=="float-left" >Sylabus</a>
+      	<a href="index.html#/sylabus" class=="float-left" >Syllabus</a>
       </li>
 
       <li class="navigation-items"> 
@@ -61,46 +61,42 @@
 <ion-view title={{pageTitle}}>
 	<ion-content class="">
 		<div class="ion-content ">
+             <div class="row navbarcreater">
+                      <div class="col"><center><h3 style="color: #00cc7a;">FEEDBACK</h3></center></div>
+                    </div>
+                  <br>
 			<div class="row">
-				<div class="col-10">
-					</div>
-					<div class="col">
-						<div class="row">
-							<div class="col-10"></div>
-							<div class="col">
-								<h4>FeedBack</h4></div>
-							<div class="col-10"></div>
-						</div>
-						<div class ="row">		
-					<div class ="col-10">
-					</div>
-					<div class ="col">
-						<input type ="text" class="text-style" ng-model="Feedback.feedbackTitle">
-					</div>
-					<div class ="col-10">
-					</div>
-				</div>
-						<div class="row">
-							<div class="col-10"></div>
-							<div class="col">
-								<textarea class="textarea-style" name="feedback" ng-model="Feedback.feedbackMessage"></textarea>
-							</div>
-							<div class="col-10"></div>
-						</div>
-					<div class ="row">
-				  		
-					<div class ="col-10">
-					</div>
-					<div class ="col">
-						<input class="button button-assertive" type ="button" ng-click="Feedback.sendFeedback()" value="Post">
-					</div>
-					<div class ="col-10">
-					</div>
-				</div>
-					</div>
-					<div class="col-10">
-					</div>
+            <div class="col-10"></div>
+				<div class="col">
+						<h5>Enter your feedback here.....</h5></div>
+				<div class="col-10"></div>
 			</div>
+		   <div class ="row">		
+				<div class ="col-10">
+				</div>
+				<div class ="col">
+					<input type ="text" class="text-style" ng-model="Feedback.feedbackTitle">
+				</div>
+				<div class ="col-10">
+				</div>
+			</div>
+				<div class="row">
+					<div class="col-10"></div>
+					<div class="col">
+						<textarea class="textarea-style" name="feedback" ng-model="Feedback.feedbackMessage"></textarea>
+					</div>
+					<div class="col-10"></div>
+			  </div>
+				<div class ="row">
+				  		
+					<div class ="col-33">
+					</div>
+					<div class ="col">
+						<input class="button button-block button-royal button-login reg-color newbcolorforbutton" type ="button" ng-click="Feedback.sendFeedback()" value="Post">
+					</div>
+					<div class ="col-33">
+					</div>
+			  </div>
 		</div>
 	</ion-content>
 </ion-view>
